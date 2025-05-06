@@ -1,0 +1,76 @@
+<html>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+            color: black;
+            background-color: white;
+            padding: 10px;
+        }
+        .MainTitleClass {
+            background-color: white;
+            text-align: center;
+        }
+        .titleClass {
+            background-color: rgba(226, 20, 20, 0.836);
+            text-align: center;
+        }
+        .outro {
+            text-align: center;
+            background-color: lightgray;
+        }
+        h1 {
+            text-align: center;
+            font-size: 18pt;
+        }
+        h2 {
+            text-align: center;
+            font-size: 16pt;
+        }
+        h3 {
+            text-align: center;
+            font-size: 12pt;
+        }
+        ul {
+            list-style-type: "➜ ";
+            line-height: 1.6;
+        }
+    </style>
+<body>
+    <h1><span class="MainTitleClass">{{.MainTitle}}</span> </h1> <!-- Newsletter main title -->
+    <br>
+  <p>{{.IntroText}}</p>                                 <!-- Intro paragraph -->
+  
+  {{range .Categories}}         <!-- Iterate over each category -->
+  <h3>----------</h3>
+  <h2><span class="titleClass">{{.Title}}</span></h2> <!-- Category title -->
+    {{if .HasSub}}              <!-- If subcategories exists for this category -->
+      {{range .SubCategories}}  <!-- iterate over them -->
+      <p><b><u>{{.Title}}</u></b></p>                   <!-- Sub category title -->
+        <ul>
+            {{range .Items}}    <!-- Iterate over subcategory items -->
+            <li><a href="{{.Link}}">{{.Title}}</a></li> <!-- Item title as a clickable link -->
+            <i>{{.PubDate}}</i>                         <!-- Item Publication date -->
+            <blockquote>{{.Description}}</blockquote>   <!-- Item description (in a quote block) -->
+            {{end}}
+        </ul>
+        <br>
+      {{end}}
+    {{else}} <!-- If no subcategories exists, iterate over category items -->
+    <ul>
+        {{range .Items}}
+        <li><a href="{{.Link}}">{{.Title}}</a></li> <!-- Item title as a clickable link -->
+        <i>{{.PubDate}}</i>                         <!-- Item Publication date -->
+        <blockquote>{{.Description}}</blockquote>   <!-- Item description (in a quote block) -->
+        {{end}}
+    </ul>
+    <br>
+    {{end}}
+  {{end}}
+  
+  <div class="outro">
+    <h3>{{.OutroText}}</h3>                         <!-- Outro paragraph -->
+    <a href="{{.OutroLink}}">{{.OutroLinkTitle}}</a><!-- Outro link -->
+  </div>
+</body>
+</html>

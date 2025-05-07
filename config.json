@@ -7,40 +7,40 @@
 	"date_format": "2006-01-02",
 	"categories": [
 		{
-			"title": "Category 1 - Boot.dev blog (with subcategories)",
-			"rss_link": "https://blog.boot.dev/index.xml",
+			"title": "Category 1",
+			"rss_link": "",
 			"keyword": "",
 			"days_interval": 0,
-			"max_items": 6,
+			"max_items": 0,
 			"subcategories": [
 				{
-					"title": "Sub category A - News",
-					"rss_link": "https://blog.boot.dev/index.xml",
-					"keyword": "news",
-					"days_interval": 60,
-					"max_items": 6,
+					"title": "Sub category A",
+					"rss_link": "",
+					"keyword": "",
+					"days_interval": 0,
+					"max_items": 0,
 					"subcategories": null
 				},
 				{
-					"title": "Sub category B - Computer science",
-					"rss_link": "https://blog.boot.dev/index.xml",
-					"keyword": "computer-science",
+					"title": "Sub category B",
+					"rss_link": "",
+					"keyword": "",
 					"days_interval": 0,
-					"max_items": 2,
+					"max_items": 0,
 					"subcategories": null
 				}
 			]
 		},
 		{
-			"title": "Category 2 - IGN games news (no subcategories",
-			"rss_link": "https://feeds.feedburner.com/ign/all",
+			"title": "Category 2",
+			"rss_link": "",
 			"keyword": "",
 			"days_interval": 0,
-			"max_items": 4,
+			"max_items": 0,
 			"subcategories": null
 		},
 		{
-			"title": "Category 3 (left empty for manual addition)",
+			"title": "Category 3",
 			"rss_link": "",
 			"keyword": "",
 			"days_interval": 0,

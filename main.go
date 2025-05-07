@@ -11,7 +11,7 @@ func main() {
 	// Load env variable if any
 	err := godotenv.Load()
 	if err != nil {
-		fmt.Println("No .env file found, using default filepathes")
+		fmt.Println("No .env file found, using default filepaths")
 	}
 
 	// Start logging system
